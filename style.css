@@ -40,9 +40,10 @@ html {
 :root {
   --primary-background: #1f2833;
   --secondary-background: #000;
-  --primary-text-color: #66fcf1;
-  --secondary-text-color: #c5c6c7;
-  --sub-heading-color: #45a29e;
+  --primary-text-color: #9067c6;
+  --secondary-text-color: #f7ece1;
+  --sub-heading-color: #8d86c9
+  ;
   --card-bg-color: #171d23;
   --card-border-color: #27313a;
 
@@ -221,12 +222,12 @@ hr {
 }
 
 .mentor-section {
-  margin-top: 0; /* Adjust as needed for spacing */
+  margin-top: 0; 
 }
 
-  div.box{
-    background-color: #ffffff !important;
-  }
+div.box {
+    background-color: var(--primary-background);
+}
 
 .mentor-heading {
   text-align: center;
@@ -631,56 +632,48 @@ ul.roadmap h2 {
 }
 
 
-.box ul{
-  margin : 150px auto;
-  width : 80%;
+.box .inner1 {
+  margin: auto;
 }
 
-.box ul li{
-  list-style : none;
-  float : left;
-  text-align :center;
-  width : 33.33%;
-
+.box .inner1 .elementPhoto {
+  text-align: center;
 }
 
-.box ul li a{
+.box .inner1 .elementPhoto a {
   text-decoration: none;
-  color:#fff;
-
-
+  color: #fff;
 }
 
-.box ul li a img{
-  width :300px;
-  transition : 0.5s;
-
+.box .inner1 .elementPhoto a img {
+  width: 100%;
+  max-width: 300px;
+  transition: 0.5s;
 }
-.box ul li a .text{
+
+.box .inner1 .elementPhoto a .text {
   opacity: 0;
-  transition: .5s;
+  transition: 0.5s;
   transform: translate(70px);
   font-size: 30px;
   font-weight: bold;
 }
 
-.box ul li a.text span 
-{
+.box .inner1 .elementPhoto a.text span {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-
-   
-}
-.box ul li:hover img{
-  transform: translateY(-20px) scale(.8);
-
 }
 
-.box ul li:hover .text{
+.box .inner1 .elementPhoto:hover img {
+  transform: translateY(-20px) scale(0.8);
+}
+
+.box .inner1 .elementPhoto:hover .text {
   transform: translateY(-35px);
   opacity: 1;
 }
+
 .contact-us img {
   width: 25px;
   height: 25px;
@@ -1151,7 +1144,7 @@ footer {
 }
 
 #img_msulogo:hover {
-  filter: invert(200%) opacity(0.7) drop-shadow(0 0 0 #46aeaa);
+  filter: invert(200%) opacity(0.7) drop-shadow(0 0 0 var(--primary-text-color));
 }
 
 .footer_social_media {
@@ -1285,4 +1278,152 @@ footer {
 
 .footer_P_hover:hover {
   color: #FFFFFF;
+}
+
+/* New Animation CSS */
+
+/*
+.container-alt {
+  position : relative;
+  width : 1100px;
+  display : flex;
+  align-items : center;
+  justify-content : center;
+  flex-warp : warp;
+  padding : 30px;  
+}
+
+.container-alt .card-alt {
+  position: relative;
+  max-width : 300px;
+  height : 215px;  
+  background-color : var(--secondary-background);
+  margin : 30px 10px;
+  padding : 20px 15px;
+  
+  display : flex;
+  flex-direction : column;
+  box-shadow : 0 5px 20px rgba(0,0,0,0.5);
+  transition : 0.3s ease-in-out;
+  border-radius : 15px;
+}
+.container-alt .card-alt:hover {
+  height : 320px;    
+}
+
+
+.container-alt .card-alt .image {
+  position : relative;
+  width : 260px;
+  height : 260px;
+  color: var(--secondary-background);
+  top : -40%;
+  left: 8px;
+  box-shadow : 0 5px 20px rgba(0,0,0,0.2);
+  z-index : 1;
+}
+
+.container-alt .card-alt .image img {
+  max-width : 100%;
+  border-radius : 15px;
+}
+
+.container-alt .card-alt .content {
+  position : relative;
+  top : -140px;
+  padding : 10px 15px;
+  color : var(--secondary-text-color);
+  text-align : center;
+  
+  visibility : hidden;
+  opacity : 0;
+  transition : 0.3s ease-in-out;
+    
+}
+
+.container-alt .card-alt:hover .content {
+   margin-top : 30px;
+   visibility : visible;
+   opacity : 1;
+   transition-delay: 0.2s;
+} */
+
+
+.container-alt {
+  position: relative;
+  width: 1100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 30px;  
+}
+
+.container-alt .card-alt {
+  position: relative;
+  max-width: 300px;
+  height: 215px;  
+  background-color: var(--card-bg-color);
+  margin: 30px 10px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out;
+  border-radius: 15px;
+}
+
+.container-alt .card-alt:hover {
+  height: 320px;    
+}
+
+.container-alt .card-alt .image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.container-alt .card-alt:hover .image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 0.2s ease-in-out;
+  visibility: hidden;
+}
+
+.container-alt .card-alt .image img {
+  width: min(100%,175px);
+  height: min(100%,260px);
+  color: var(--secondary-background);
+  border-radius: 15px;
+}
+
+.container-alt .card-alt h3 {
+  color: var(--primary-text-color);
+}
+
+.container-alt .card-alt .content {
+  position: relative;
+  padding: 10px 15px;
+  color: var(--secondary-text-color);
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+  margin-top: -260px; /* Adjusted this value */
+}
+
+.container-alt .card-alt:hover .content {
+  margin-top: 30px;
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0.2s;
 }
